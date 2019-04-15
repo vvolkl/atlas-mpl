@@ -3,7 +3,13 @@ patch.facecolor: 348ABD  # blue
 patch.edgecolor: FFFFFF
 patch.antialiased: True
 
-text.usetex: True
+legend.frameon:       false
+legend.handletextpad: 0.3
+legend.numpoints:     1
+legend.labelspacing:  0.2
+legend.fontsize: 28
+
+text.usetex: False
 font.size: 14.0
 font.family: sans-serif
 font.sans-serif: Helvetica, Tex Gyre Heros, Arial
@@ -17,7 +23,7 @@ axes.facecolor: FFFFFF
 axes.edgecolor: 000000
 axes.linewidth: 1
 axes.grid: False
-axes.titlesize: x-large
+axes.titlesize: 30
 axes.labelsize: large
 axes.labelcolor: 000000
 axes.axisbelow: True       # grid/ticks are below elements (e.g., lines, text)
@@ -28,22 +34,37 @@ axes.autolimit_mode: round_numbers
 # Generated with HCL Wizard
 axes.prop_cycle: cycler('color', ['54C9D1','ECA89A','95BCED','CEB776','D3A9EA','9BC57F','F0A1CA','5FCBAA'])
 
-xtick.color: 000000
-xtick.major.size: 5
-xtick.minor.size: 3
+
+xtick.major.size:  14
+xtick.minor.size:  7
+xtick.major.width: 1.5
+xtick.minor.width: 1.5
+xtick.major.pad:   10
+xtick.minor.pad:   10
+xtick.labelsize: 30
+xtick.direction: in
 xtick.top: True
 xtick.bottom: True
-xtick.direction: in
+xtick.minor.visible: True
+ytick.minor.visible: True
 
 ytick.color: 000000
-ytick.major.size: 5
-ytick.minor.size: 3
 ytick.left: True
 ytick.right: True
 ytick.direction: in
+ytick.major.size:  14
+ytick.minor.size:  7
+ytick.major.width: 1.5
+ytick.minor.width: 1.5
+ytick.major.pad:   10
+ytick.minor.pad:   10
+ytick.labelsize: 30
 
 
-figure.figsize: 8, 6
+figure.figsize: 8, 8
+figure.dpi: 100
 figure.facecolor: FFFFFF
 figure.edgecolor: 0.50
 
+savefig.bbox:       tight
+savefig.pad_inches: 0.1

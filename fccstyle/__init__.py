@@ -3,6 +3,8 @@ import matplotlib.style as _style
 import pkg_resources as _pkg
 import atexit as _atexit
 
+
+
 _stylesheets = _pkg.resource_filename(__name__, 'stylesheets')
 _atexit.register(_pkg.cleanup_resources)
 _style.core.USER_LIBRARY_PATHS.append(_stylesheets)
