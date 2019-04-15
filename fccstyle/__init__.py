@@ -35,16 +35,16 @@ _EXTRA_COLORS = {
         'on:brown': '#ab7967'
 }
 
-_atlas_label = "ATLAS"
+_fcc_label = "FCC"
 _mpl.colors.EXTRA_COLORS = _EXTRA_COLORS
 _mpl.colors.colorConverter.colors.update(_EXTRA_COLORS)
 
 
-def use_atlas_style(atlasLabel='ATLAS'):
-    "Setup ATLAS style."
-    global _atlas_label
-    _style.use('atlas')
-    _atlas_label = atlasLabel
+def use_fcc_style(fccLabel='FCC'):
+    "Setup FCC style."
+    global _fcc_label
+    _style.use('fcc')
+    _fcc_label = fccLabel
     _mpl.rcParams['font.size'] = 16
     _mpl.rcParams['text.latex.preamble'] = [r'\usepackage{helvet}',
                                             r'\usepackage{sansmath}',
@@ -55,7 +55,7 @@ def use_atlas_style(atlasLabel='ATLAS'):
 
 def set_xlabel(label, ax=None, *args, **kwargs):
     """
-    Set x label in ATLAS style (right aligned).
+    Set x label in FCC style (right aligned).
 
     Additional parameters are passed through to `ax.set_xlabel`.
 
@@ -73,7 +73,7 @@ def set_xlabel(label, ax=None, *args, **kwargs):
 
 def set_ylabel(label, ax=None, *args, **kwargs):
     """
-    Set y label in ATLAS style (right aligned).
+    Set y label in FCC style (right aligned).
 
     Additional parameters are passed through to ``ax.set_ylabel``.
 
@@ -89,11 +89,11 @@ def set_ylabel(label, ax=None, *args, **kwargs):
     ax.set_ylabel(label, y=1.0, ha='right', *args, **kwargs)
 
 
-def draw_atlas_label(x, y, ax=None, status='int', simulation=False,
+def draw_fcc_label(x, y, ax=None, status='int', simulation=False,
                      energy=None, lumi=None, desc=None, lumi_lt=False, 
                      *args, **kwargs):
     """
-    Draw ATLAS label.
+    Draw FCC label.
 
     Additional parameters are passed through to ``ax.text``.
 
@@ -112,13 +112,13 @@ def draw_atlas_label(x, y, ax=None, status='int', simulation=False,
     energy : str, optional
         Centre of mass energy, including units
     lumi : float, optional
-        Integrated luminosity in /fb
+        Integrated luminosity in /ab
     lumi_lt: bool, optional
         True if only a subset of data was processed
     desc : str, optional
         Additional description
     """
-    global _atlas_label
+    global _fcc_label
     if ax is None:
         ax = _mpl.pyplot.gca()
     sim_str = "Simulation " if simulation else ""
@@ -144,13 +144,13 @@ def draw_atlas_label(x, y, ax=None, status='int', simulation=False,
     if lumi is not None:
         show_e_nl = True
         lumi_str = (fr', ${"< " if lumi_lt else ""}{lumi:.4g} \ '
-                    fr'\textsf{{fb}}^{{-1}}$')
+                    fr'\textsf{{ab}}^{{-1}}$')
     else:
         lumi_str = ''
 
     desc_line = desc is not None
     nl = r'\\'
-    label = (fr'\textbf{{\textit{{{_atlas_label}}}}} {sim_str}{status_str}'
+    label = (fr'\textbf{{\textit{{{_fcc_label}}}}} {sim_str}{status_str}'
              fr'{nl if show_e_nl else ""}'
              fr'{energy_str}{lumi_str}{nl if desc_line else ""}'
              fr'{desc if desc_line else ""}')

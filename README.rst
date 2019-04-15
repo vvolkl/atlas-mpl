@@ -2,9 +2,9 @@ ATLAS Matplotlib Style
 ======================
 
 Provides a Matplotlib style replicating that used by the
-`ATLAS <http://atlas.cern>`__ collaboration.
+`FCC` collaboration.
 
-This is *not* an official ATLAS package, and there is no guarantee that
+This is *not* an official FCC package, and there is no guarantee that
 the style will meet any requirements.
 
 In addition, this package also provides:
@@ -19,5 +19,7 @@ In addition, this package also provides:
    the `Oceanic
    Next <https://github.com/voronianski/oceanic-next-color-scheme>`__
    theme
--  A function to draw the ATLAS label (requires ``usetex: true`` as set
-   by the included ATLAS style)
+-  A function to draw the FCC label (requires ``usetex: true`` as set
+   by the included FCC style)
+
+Spin-Off from <https://github.com/beojan/atlas-mpla> by Beojan Stanislaus

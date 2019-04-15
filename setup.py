@@ -18,22 +18,23 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='atlas-mpl-style',
+    name='fccstyle',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     version='0.5.0',
 
-    description='ATLAS style for Matplotlib 2.0+',
+    description='FCC plot style ',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/beojan/atlas-mpl',
+    url='https://github.com/vvolkl/fcc-style',
 
     # Author details
-    author='Beojan Stanislaus',
-    author_email='beojan.stanislaus@cern.ch',
+
+    author='Valentin Volkl',
+    author_email='valentin.volkl@cern.ch',
 
     # Choose your license
     license='GPL v3+',
